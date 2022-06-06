@@ -9,17 +9,15 @@ function Home() {
         <img
           src={bgLogo}
           className="img-fluid"
-          style={{ margin:"30px 100px" }}
+          style={{ margin: "30px 100px" }}
         ></img>
       </div>
-      <div
-        className="justify-content-center d-flex align-items-center"
-      >
+      <div className="justify-content-center d-flex align-items-center">
         <div
           className="container px-5 bg-white py-4"
           style={{
             width: "560px",
-            marginTop:"95px",
+            marginTop: "95px",
             boxShadow: "0px 0px 6px -1px #9D9D9D",
             borderRadius: "10px",
           }}
@@ -36,7 +34,8 @@ function Home() {
           </div>
           <form>
             <div className="form-group py-3">
-              <label className="pb-1"
+              <label
+                className="pb-1"
                 style={{ fontWeight: "500", fontSize: "14px" }}
                 for="company"
               >
@@ -47,16 +46,28 @@ function Home() {
                 className="form-control"
                 id="company"
                 placeholder="e.g. Example Inc"
+                required
               />
             </div>
             <div className="form-group ">
-              <label className="pb-1"
+              <label
+                className="pb-1"
                 style={{ fontWeight: "500", fontSize: "14px" }}
                 for="Industry"
               >
                 Industry
               </label>
-              <select className="w-100 rounded pl-2" style={{outline:"none", border:"1px solid #ced4da", height:"36px"}} id="Industry">
+              <select
+                className="w-100 rounded px-2"
+                style={{
+                  cursor:"pointer",
+                  outline: "none",
+                  border: "1px solid #ced4da",
+                  height: "36px",
+                }}
+                id="Industry"
+                required
+              >
                 <option>Select</option>
                 <option>1</option>
                 <option>2</option>
@@ -120,7 +131,12 @@ function Home() {
             </div>
             <button
               className="border-0 py-1 rounded text-white w-100 my-3"
-              style={{ background: "#3766E8", fontWeight: "500" }}
+              style={{
+                background: "#3766E8",
+                fontWeight: "500",
+                outline: "none",
+              }}
+              type="submit"
             >
               Get Started
             </button>
@@ -128,7 +144,9 @@ function Home() {
         </div>
       </div>
 
-      <footer className="text-center mt-5">Terms of use  |  Privacy policy </footer>
+      <footer className="text-center mt-5">
+        Terms of use | Privacy policy{" "}
+      </footer>
     </section>
   );
 }
