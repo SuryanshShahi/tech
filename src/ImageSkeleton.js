@@ -6,10 +6,10 @@ function ImageSkeleton() {
   return (
     <div>
       <div className="row gx-0">
-        <div className="col-lg-6 col-md-6 col-12 p-5">
+        <div className="col-lg-6 col-12 p-5">
           <Skeleton height={800} />
         </div>
-        <div className="col-lg-6 col-md-6 col-12 p-5">
+        <div className="col-lg-6 col-12 p-5">
           <Skeleton height={30} />
           <Skeleton height={30} />
           <Skeleton height={30} />

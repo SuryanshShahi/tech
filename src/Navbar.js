@@ -7,16 +7,16 @@ function Navbar() {
   return (
     <section id="navbar">
       <nav
-        className="navbar navbar-expand-lg fixed-top bg-white p-0 m-0"
+        className="navbar navbar-expand-lg fixed-top bg-white p-0 m-0 px-5"
         style={{ boxShadow: "0 4px 12px 0 rgb(0 0 0 / 5%)" }}
       >
-        <div className="navbar-nav w-100 py-3 px-3">
+        <div className="navbar-nav w-100 py-4 px-3">
           <div className="align-items-center d-flex">
             <NavLink to="/">
               <img
                 src={logo}
                 className="img-fluid"
-                style={{ width: "200px", height: "60px" }}
+                style={{ width: "80px", height: "50px" }}
               />
             </NavLink>
 
@@ -107,8 +107,8 @@ function Navbar() {
                 {" "}
                 <form className="d-flex align-items-center">
                   <div
-                    className="fa fa-search position-absolute pl-3"
-                    style={{ zIndex: "1", color: "#808080d4" }}
+                    className="fa fa-search pl-3"
+                    style={{ zIndex: "1", color: "#808080d4", position:"absolute" }}
                   ></div>
                   <input
                     className="form-control pl-5 me-2 position-relative w-100"

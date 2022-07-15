@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import CardSkeleton from "./CardSkeleton";
+import logo from "./images/myntra.png";
 import { Carousel } from "react-bootstrap";
 export const Banner = [
   { id: 1, image: "/carousel/Activewear.webp" },
@@ -42,32 +43,40 @@ function LandingPage() {
 
   return (
     <div id="LandingPage" style={{ marginTop: "150px" }}>
-      <div className="my-5">
-        <Carousel>
-          {Banner.map((e) => (
-            <Carousel.Item interval="2000" key={e.id}>
-              <NavLink to="/products">
+      <NavLink to="/products">
+        <div
+          className="position-relative effects"
+          style={{ cursor: "pointer" }}
+        >
+          <div className="">
+            <div className="arrow2 justify-content-center d-flex align-items-center text-white">
+              <img src={logo} className="img-fluid" width={150} />
+            </div>
+          </div>
+          <Carousel>
+            {Banner.map((e) => (
+              <Carousel.Item interval="2000" key={e.id}>
                 <img src={e.image} className="img-fluid d-block w-100"></img>
-              </NavLink>
-            </Carousel.Item>
-          ))}
-        </Carousel>
-      </div>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </div>{" "}
+      </NavLink>
       <div
         className="pt-3 sidebar1"
         style={{ borderRight: "1px solid rgb(105 110 121 / 33%)" }}
       >
         <div
-          className="text-center"
+          className="text-center pt-5"
           style={{ fontWeight: "500", fontSize: "30px" }}
         >
           Search By Category
         </div>
-        <div
-          // style={{ top: "0", position: "sticky" }}
-          className="justify-content-center d-flex py-5"
-        >
-          <div className="nav nav-tabs justify-content-center d-flex" style={{boxShadow:"0px 5px 7px -3px #80808075"}}>
+        <div className="justify-content-center d-flex py-lg-3 pt-4">
+          <div
+            className="container nav nav-tabs justify-content-center d-flex py-4"
+            style={{ boxShadow: "0px 5px 7px -3px #80808075" }}
+          >
             <div
               className="btn btn-danger mb-lg-0 mb-4 active mx-2 filterbtn"
               id="click"
@@ -77,14 +86,7 @@ function LandingPage() {
             >
               All
             </div>
-            <div
-              className="btn btn-danger mb-lg-0 mb-4 mx-2 filterbtn"
-              type="button"
-              data-toggle="tab"
-              onClick={() => filterData("men's clothing")}
-            >
-              Men's Clothing
-            </div>
+
             <div
               className="btn btn-danger mb-lg-0 mb-4 mx-2 filterbtn"
               type="button"
@@ -92,6 +94,14 @@ function LandingPage() {
               onClick={() => filterData("women's clothing")}
             >
               Women's Clothing
+            </div>
+            <div
+              className="btn btn-danger mb-lg-0 mb-4 mx-2 filterbtn"
+              type="button"
+              data-toggle="tab"
+              onClick={() => filterData("men's clothing")}
+            >
+              Men's Clothing
             </div>
             <div
               className="btn btn-danger mb-lg-0 mb-4 mx-2 filterbtn"
@@ -107,12 +117,12 @@ function LandingPage() {
               data-toggle="tab"
               onClick={() => filterData("electronics")}
             >
-              Electronic Gadgets
+              Electronics
             </div>
           </div>
         </div>
       </div>
-      <div className="container-fluid pb-5">
+      <div className="container-fluid pt-4 pb-5">
         <div
           className="container"
           style={{ overflowY: "scroll", height: "100vh" }}

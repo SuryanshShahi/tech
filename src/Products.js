@@ -42,17 +42,17 @@ function Products() {
     console.log(newRating);
   };
   return (
-    <div style={{ marginTop: "100px" }}>
+    <div id="products" style={{ marginTop: "100px" }}>
       {loading ? (
         <ImageSkeleton />
       ) : (
         <div className="row gx-0" key={items.id}>
-          <div className="col-6 justify-content-center d-flex">
+          <div className="col-lg-6 col-12 justify-content-center mt-lg-5 d-flex">
             <div className="m-5" style={{ top: "0", position: "sticky" }}>
-              <img src={items.image} height="600px" />
+              <img src={items.image} className="img-fluid mt-lg-5" height="600px" />
             </div>
           </div>
-          <div className="col-6 p-5">
+          <div className="col-lg-6 col-12 p-5">
             <div style={{ fontSize: "24px" }}>
               <b>Fjallraven</b>
             </div>
