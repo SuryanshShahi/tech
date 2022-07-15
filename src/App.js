@@ -12,6 +12,9 @@ import Products from "./Products";
 import Bag from "./Bag";
 
 const App = () => {
+  useEffect(() => {
+    document.title = `Online Shopping for Women, Men, Kids Fashion & Lifestyle - Myntra`;
+  });
   return (
     <section>
       <div className="app">
