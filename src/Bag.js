@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "./images/myntra.png";
+import bag from "./images/bag.jpg";
 
 function Bag() {
   return (
@@ -15,12 +16,15 @@ function Bag() {
               <img
                 src={logo}
                 className="img-fluid"
-                style={{ width: "200px", height: "60px" }}
+                style={{ width: "80px", height: "50px" }}
               />
             </NavLink>
           </div>
           <div className="bagpath mx-auto">
-            <ul className="navbar-nav align-items-center d-flex ml-5" style={{marginLeft: "170px"}}>
+            <ul
+              className="navbar-nav align-items-center d-flex ml-5"
+              style={{ marginLeft: "170px" }}
+            >
               <li className="nav-item">
                 <NavLink
                   to="/"
@@ -157,8 +161,8 @@ function Bag() {
 
             <div className="mx-3 my-2">
               <div className="d-flex py-4">
-                <input type="checkbox" className="form-check" />
-                <b className="pl-2">3/3 ITEMS SELECTED</b>
+                <input type="checkbox" className="form-check" checked/>
+                <b className="pl-2">1/1 ITEMS SELECTED</b>
                 <div
                   className="ml-auto d-flex align-items-center"
                   style={{ fontSize: "12px", fontWeight: "500" }}
@@ -187,7 +191,7 @@ function Bag() {
               <div className="d-flex">
                 <div className="row d-flex py-3 pl-3 gx-0">
                   <div className="col-2">
-                    <img src="" className="img-fluid" />
+                    <img src={bag} className="img-fluid p-2" />
                   </div>
                   <div className="col-10 pl-3">
                     Name<br></br> Category <br></br>Sold By: Flashstar Commerce

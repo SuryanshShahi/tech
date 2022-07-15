@@ -39,8 +39,6 @@ function Navbar() {
               <li
               style={{width:"fit-content"}}
                 className="nav-item px-2"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
               >
                 <NavLink to="/" className="nav-link text-dark font-weight-bold">
                   MEN
@@ -49,8 +47,6 @@ function Navbar() {
               <li
               style={{width:"fit-content"}}
                 className="nav-item px-2"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
               >
                 <NavLink to="/" className="nav-link text-dark font-weight-bold">
                   WOMEN
@@ -59,8 +55,6 @@ function Navbar() {
               <li
               style={{width:"fit-content"}}
                 className="nav-item px-2"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
               >
                 <NavLink to="/" className="nav-link text-dark font-weight-bold">
                   KIDS
@@ -69,8 +63,6 @@ function Navbar() {
               <li
               style={{width:"fit-content"}}
                 className="nav-item px-2"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
               >
                 <NavLink to="/" className="nav-link text-dark font-weight-bold">
                   HOME & LIVING
@@ -79,8 +71,6 @@ function Navbar() {
               <li
               style={{width:"fit-content"}}
                 className="nav-item px-2"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
               >
                 <NavLink to="/" className="nav-link text-dark font-weight-bold">
                   BEAUTY
@@ -89,8 +79,6 @@ function Navbar() {
               <li
               style={{width:"fit-content"}}
                 className="nav-item px-2"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
               >
                 <NavLink
                   to="/"
