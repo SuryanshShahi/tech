@@ -7,8 +7,8 @@ function Navbar() {
   return (
     <section id="navbar">
       <nav
-        className="navbar navbar-expand-lg fixed-top bg-white p-0 m-0 px-5"
-        style={{ boxShadow: "0 4px 12px 0 rgb(0 0 0 / 5%)" }}
+        className="navbar navbar-expand-lg fixed-top bg-white p-0 m-0 px-lg-5 px-md-5"
+        style={{ boxShadow: "0 4px 12px 0 rgb(0 0 0 / 5%)", zIndex:"1" }}
       >
         <div className="navbar-nav w-100 py-4 px-3">
           <div className="align-items-center d-flex">

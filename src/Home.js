@@ -393,7 +393,7 @@ function Home() {
               data-toggle="tab"
               onClick={() => filterData("electronics")}
             >
-              Electronic Gadgets
+              Electronics
             </div>
           </div>
         </div>
@@ -900,22 +900,3 @@ function Home() {
 }
 
 export default Home;
-// {items.map((e) => {
-//   return (
-//     <div className="col-3" key={e.id}>
-
-//         <div>
-//           <img src={e.image} className="img-fluid" />
-//         </div>
-//         <div>{e.id}</div>
-//         <div>{e.title}</div>
-//         <div>{e.price}</div>
-//         <div>{e.description}</div>
-//         <div>{e.category}</div>
-
-//         <div>{e.rating.rate}</div>
-//         <div>{e.rating.count}</div>
-//         <hr></hr>
-//     </div>
-//   );
-// })}

@@ -7,7 +7,7 @@ function Bag() {
   return (
     <section id="bag">
       <nav
-        className="navbar navbar-expand-lg bg-white p-0 m-0"
+        className="navbar navbar-expand-lg bg-white p-0 m-0 px-lg-5 px-md-5"
         style={{ borderBottom: "1px solid #d4d5d9" }}
       >
         <div className="d-flex py-3 px-3 w-100">
@@ -22,12 +22,11 @@ function Bag() {
           </div>
           <div className="bagpath mx-auto">
             <ul
-              className="navbar-nav align-items-center d-flex ml-5"
-              style={{ marginLeft: "170px" }}
+              className="navbar-nav align-items-center d-flex"
+              style={{ marginLeft: "220px" }}
             >
               <li className="nav-item">
-                <NavLink
-                  to="/"
+                <div
                   className="active nav-link text-info"
                   style={{ fontWeight: "500" }}
                 >
@@ -36,32 +35,30 @@ function Bag() {
                     className="p-0 m-0"
                     style={{ height: "2px", color: "blue" }}
                   ></hr>
-                </NavLink>
+                </div>
               </li>
               <div>-----------</div>
               <li className="nav-item">
-                <NavLink
-                  to="/"
+                <div
                   className="nav-link text-dark"
                   style={{ fontWeight: "500" }}
                 >
                   ADDRESS
-                </NavLink>
+                </div>
               </li>
               <div>-----------</div>
               <li className="nav-item">
-                <NavLink
-                  to="/"
+                <div
                   className="nav-link text-dark"
                   style={{ fontWeight: "500" }}
                 >
                   PAYMENT
-                </NavLink>
+                </div>
               </li>
             </ul>
           </div>
           <div
-            className="ml-auto d-flex align-items-center pr-5"
+            className="ml-auto d-flex align-items-center"
             style={{ fontWeight: "500" }}
           >
             <span className="fa fa-shield fa-2x text-info pr-2"></span> 100%
@@ -384,7 +381,7 @@ function Bag() {
                   </span>
                 </div>
                 <div className="ml-auto">
-                  ₹99<span className="text-success">FREE</span>{" "}
+                  ₹99<span className="text-success pl-2">FREE</span>{" "}
                 </div>
               </div>
             </div>
