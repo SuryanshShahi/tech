@@ -122,9 +122,9 @@ function LandingPage() {
           </div>
         </div>
       </div>
-      <div className="container-fluid pt-4 pb-5">
+      <div className="container-fluid p-0 m-0 pt-4 pb-5">
         <div
-          className="container"
+          className="container p-0"
           style={{ overflowY: "scroll", height: "100vh" }}
         >
           {loading ? (
