@@ -49,10 +49,14 @@ function Products() {
         <div className="row gx-0" key={items.id}>
           <div className="col-lg-6 col-12 justify-content-center mt-lg-5 d-flex">
             <div className="m-5" style={{ top: "0", position: "sticky" }}>
-              <img src={items.image} className="img-fluid mt-lg-5" height="600px" />
+              <img
+                src={items.image}
+                className="img-fluid mt-lg-5"
+                height="600px"
+              />
             </div>
           </div>
-          <div className="col-lg-6 col-12 p-5">
+          <div className="col-lg-6 col-12 p-lg-5 p-3">
             <div style={{ fontSize: "24px" }}>
               <b>Fjallraven</b>
             </div>
@@ -133,11 +137,9 @@ function Products() {
                 <div className="align-items-center justify-content-center d-flex mx-3 SelectSize">
                   XL
                 </div>
-                <div className="align-items-center justify-content-center d-flex SelectSize">
-                  XXL
-                </div>
               </div>
-              <NavLink to={`/products/${id}/bag`}
+              <NavLink
+                to={`/products/${id}/bag`}
                 className="btn btn-danger my-3 px-5 py-3"
                 style={{ width: "285px" }}
               >
@@ -150,11 +152,12 @@ function Products() {
 
             <div className="py-2" style={{ fontSize: "16px" }}>
               <b>DELIVERY OPTIONS</b>
-              <div className="mt-4 mb-2 searchbox align-content-center d-flex w-50">
+              <div className="mt-4 mb-2 searchbox align-content-center d-flex">
                 <input
                   type="search"
                   placeholder="PINCODE"
-                  className="emailInput form-control px-4 position-relative bg-white"
+                  className="form-control px-4 position-relative bg-white"
+                  style={{ maxWidth: "350px" }}
                   required
                 />
 
@@ -190,7 +193,7 @@ function Products() {
                 </div>
                 <div>
                   <div
-                    className="d-flex align-items-center w-75"
+                    className="d-flex align-items-center"
                     style={{ fontWeight: "500" }}
                   >
                     <span
@@ -199,7 +202,7 @@ function Products() {
                     ></span>
                     Easy 30 days return & exchange available
                     <div
-                      className="text-danger ml-auto"
+                      className="text-danger ml-auto pr-md-5"
                       style={{ fontSize: "14px", fontWeight: "bolder" }}
                     >
                       MORE INFO
@@ -246,17 +249,20 @@ function Products() {
 
               <div className="row gx-0">
                 <div
-                  className="col-2 align-items-center d-flex"
+                  className="col-lg-2 col-6 align-items-center justify-content-lg-start justify-content-end pr-lg-0 pr-4 d-flex"
                   style={{ borderRight: "0.1px solid #80808075" }}
                 >
-                  <div className="d-flex">
+                  <div className="d-flex pr-lg-0 pr-3">
                     <span style={{ fontSize: "48px", fontWeight: "500" }}>
                       {items.rating && items.rating.rate}
                     </span>
                     <span className="fa fa-star text-info fa-lg px-2 mt-auto mb-3"></span>
                   </div>
                 </div>
-                <div className="col-6 ml-5" style={{ color: "#A9ABB3" }}>
+                <div
+                  className="col-lg-6 col-6 pl-5"
+                  style={{ color: "#A9ABB3" }}
+                >
                   <div className="d-flex align-items-center">
                     5
                     <span
@@ -359,26 +365,23 @@ function Products() {
                 {items.rating && items.rating.count}
               </div>
             </div>
-
-        
           </div>
 
-
-          <div className="px-3">
-          <div className="pb-3 pl-3" style={{ fontSize: "16px" }}>
-            <b>SIMILAR PRODUCTS </b>
+          <div className="px-lg-3 ">
+            <div className="pb-3 pl-3" style={{ fontSize: "16px" }}>
+              <b>SIMILAR PRODUCTS </b>
             </div>
             <div className="row gx-0">
               {data.map((e) => {
                 return (
-                  <div className="col-lg-3 col-md-4 col-6" key={e.id}>
+                  <div className="col-lg-3 col-md-4 col-sm-6 col-12" key={e.id}>
                     <div
                       className="card carscard text-decoration-none mx-3"
                       data-bs-toggle="tooltip"
                       title={e.title}
                     >
                       <NavLink
-                      target="_blank"
+                        target="_blank"
                         to={`/products/${e.id}`}
                         className="justify-content-center d-flex"
                       >
@@ -453,9 +456,7 @@ function Products() {
                       </div>
                       <div className="px-2">
                         <div className="font-weight-bolder my-2">
-                          <span style={{ fontWeight: "500" }}>
-                            {e.title}
-                          </span>
+                          <span style={{ fontWeight: "500" }}>{e.title}</span>
                           <div
                             style={{
                               fontSize: "14px",

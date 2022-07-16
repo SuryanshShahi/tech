@@ -10,7 +10,7 @@ function Navbar() {
         className="navbar navbar-expand-lg fixed-top bg-white p-0 m-0 px-lg-5 px-md-5"
         style={{ boxShadow: "0 4px 12px 0 rgb(0 0 0 / 5%)", zIndex:"997" }}
       >
-        <div className="navbar-nav w-100 py-4 px-3">
+        <div className="navbar-nav w-100 py-lg-3 py-2 px-3">
           <div className="align-items-center d-flex">
             <NavLink to="/">
               <img
@@ -37,7 +37,7 @@ function Navbar() {
               style={{ width: "100%" }}
             >
               <li
-              style={{width:"fit-content"}}
+              style={{width:"fit-content", fontSize:"14px"}}
                 className="nav-item px-2"
               >
                 <NavLink to="/" className="nav-link text-dark font-weight-bold">
@@ -45,7 +45,7 @@ function Navbar() {
                 </NavLink>
               </li>
               <li
-              style={{width:"fit-content"}}
+              style={{width:"fit-content", fontSize:"14px"}}
                 className="nav-item px-2"
               >
                 <NavLink to="/" className="nav-link text-dark font-weight-bold">
@@ -53,7 +53,7 @@ function Navbar() {
                 </NavLink>
               </li>
               <li
-              style={{width:"fit-content"}}
+              style={{width:"fit-content", fontSize:"14px"}}
                 className="nav-item px-2"
               >
                 <NavLink to="/" className="nav-link text-dark font-weight-bold">
@@ -61,7 +61,7 @@ function Navbar() {
                 </NavLink>
               </li>
               <li
-              style={{width:"fit-content"}}
+              style={{width:"fit-content", fontSize:"14px"}}
                 className="nav-item px-2"
               >
                 <NavLink to="/" className="nav-link text-dark font-weight-bold">
@@ -69,7 +69,7 @@ function Navbar() {
                 </NavLink>
               </li>
               <li
-              style={{width:"fit-content"}}
+              style={{width:"fit-content", fontSize:"14px"}}
                 className="nav-item px-2"
               >
                 <NavLink to="/" className="nav-link text-dark font-weight-bold">
@@ -77,7 +77,7 @@ function Navbar() {
                 </NavLink>
               </li>
               <li
-              style={{width:"fit-content"}}
+              style={{width:"fit-content", fontSize:"14px"}}
                 className="nav-item px-2"
               >
                 <NavLink
