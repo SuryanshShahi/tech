@@ -410,7 +410,10 @@ function Home() {
               <div className="row gx-0">
                 {data.map((e) => {
                   return (
-                    <div className="col-lg-3 col-md-4 col-sm-6 col-12" key={e.id}>
+                    <div
+                      className="col-lg-3 col-md-4 col-sm-6 col-12"
+                      key={e.id}
+                    >
                       <div
                         className="card carscard text-decoration-none mx-3 mt-1"
                         data-bs-toggle="tooltip"
@@ -623,7 +626,11 @@ function Home() {
           </div>
         </div>
 
-        <div className="slider bg-white" id="slider" style={{boxShadow:"-1px 0px 7px -2px "}}>
+        <div
+          className="slider bg-white"
+          id="slider"
+          style={{ boxShadow: "-1px 0px 7px -2px " }}
+        >
           <div
             className=""
             style={{ borderRight: "1px solid rgb(105 110 121 / 33%)" }}
@@ -631,12 +638,25 @@ function Home() {
             <div>
               <div
                 className="d-flex align-items-center bg-white"
-                style={{ top: "0", position: "sticky", boxShadow:"0px 0px 8px -3px", zIndex:"1" }}
+                style={{
+                  top: "0",
+                  position: "sticky",
+                  boxShadow: "0px 0px 8px -3px",
+                  zIndex: "1",
+                }}
               >
-                <div className="p-4" style={{fontWeight:"500"}}>FILTERS</div>
-                <div className="fa-2x ml-auto pr-3" style={{cursor:"pointer"}}  onClick={() =>
-                  (document.getElementById("slider").style.display = "none")
-                }>&times;</div>
+                <div className="p-4" style={{ fontWeight: "500" }}>
+                  FILTERS
+                </div>
+                <div
+                  className="fa-2x ml-auto pr-3"
+                  style={{ cursor: "pointer" }}
+                  onClick={() =>
+                    (document.getElementById("slider").style.display = "none")
+                  }
+                >
+                  &times;
+                </div>
               </div>
               <div className="pl-4 pt-3">
                 <div>

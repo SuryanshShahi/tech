@@ -284,7 +284,8 @@ function Bag() {
                         >
                           &nbsp;&nbsp;₹<del>1849</del>
                         </span>
-                        <span className="text-danger"
+                        <span
+                          className="text-danger"
                           style={{
                             fontSize: "12px",
                           }}
@@ -333,7 +334,10 @@ function Bag() {
               <b>&nbsp;&nbsp;&nbsp;Help India Fight COVID-19</b>
             </div>
 
-            <div className="pb-3" style={{fontSize:"16px", fontWeight:"500"}}>
+            <div
+              className="pb-3"
+              style={{ fontSize: "16px", fontWeight: "500" }}
+            >
               <span
                 className="px-3 py-2"
                 style={{ borderRadius: "35px", border: "1px solid #d4d5d9" }}
@@ -401,27 +405,22 @@ function Bag() {
               </div>
               {loading ? (
                 <div className="">
-                    <Skeleton height={148} />
-                  </div>
-               
+                  <Skeleton height={148} />
+                </div>
               ) : (
-                <div style={{fontSize:'13.5px'}}>
+                <div style={{ fontSize: "13.5px" }}>
                   <div className="d-flex align-items-center">
-                    <div className="py-2">
-                      Total MRP
+                    <div className="py-2">Total MRP</div>
+                    <div className="ml-auto">
+                      <b>$</b> {items.price}
                     </div>
-                    <div className="ml-auto"><b>$</b> {items.price}</div>
                   </div>
                   <div className="d-flex align-items-center">
-                    <div className="py-2">
-                      Discount on MRP
-                    </div>
+                    <div className="py-2">Discount on MRP</div>
                     <div className="ml-auto text-success">-₹1150</div>
                   </div>
                   <div className="d-flex align-items-center">
-                    <div className="py-2" >
-                      Coupon Discount
-                    </div>
+                    <div className="py-2">Coupon Discount</div>
                     <div className="ml-auto">
                       <span className="text-danger">Apply Coupon</span>
                     </div>
@@ -434,7 +433,8 @@ function Bag() {
                       </span>
                     </div>
                     <div className="ml-auto">
-                      <del>₹99</del><span className="text-success pl-2">FREE</span>{" "}
+                      <del>₹99</del>
+                      <span className="text-success pl-2">FREE</span>{" "}
                     </div>
                   </div>
                 </div>

@@ -44,7 +44,7 @@ function Products() {
               <img
                 src={items.image}
                 className="img-fluid mt-lg-5"
-                style={{maxWidth:"450px"}}
+                style={{ maxWidth: "450px" }}
               />
             </div>
           </div>

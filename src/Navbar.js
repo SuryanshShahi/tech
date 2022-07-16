@@ -138,7 +138,12 @@ function Navbar() {
                 </NavLink>
                 <span
                   className="badge bg-danger position-absolute ml-3 mb-2"
-                  style={{ fontSize: "12px", height: "fit-content", borderRadius:"50px", top:"18px" }}
+                  style={{
+                    fontSize: "12px",
+                    height: "fit-content",
+                    borderRadius: "50px",
+                    top: "18px",
+                  }}
                 >
                   1
                 </span>
