@@ -4,12 +4,12 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
 import { Switch, Route, Redirect } from "react-router-dom";
 import "./App.css";
-import Home from "./Home";
-import LandingPage from "./LandingPage";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
-import Products from "./Products";
-import Bag from "./Bag";
+import Home from "./components/Home";
+import LandingPage from "./components/LandingPage";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import Products from "./components/Products";
+import Bag from "./components/Bag";
 
 const App = () => {
   useEffect(() => {
