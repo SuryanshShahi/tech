@@ -118,7 +118,7 @@ function Products() {
                         <b>SELECT SIZE</b>
                       </div>
                       <div style={{ fontSize: "14px", color: "#FF3E6C" }}>
-                        <b>SIZE CHART</b>
+                        <b>SIZE CHART</b> <span className="fa fa-angle-right font-weight-bolder pl-2 fa-lg"></span>
                       </div>
                     </div>
                     <div className="d-flex">
