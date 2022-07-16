@@ -220,7 +220,10 @@ function Bag() {
                 ) : (
                   <div className="row d-flex py-3 pl-3 gx-0">
                     <div className="col-2 align-items-center d-flex">
-                      <img src={items.image} className="img-fluid p-lg-2 p-md-2" />
+                      <img
+                        src={items.image}
+                        className="img-fluid p-lg-2 p-md-2"
+                      />
                     </div>
                     <div className="col-10 pl-3">
                       <div style={{ fontWeight: "500" }}> {items.title}</div>

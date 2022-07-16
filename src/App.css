@@ -164,7 +164,7 @@ button {
   .carousel-indicators button {
     display: none;
   }
-  #products .img-fluid{
+  #products .img-fluid {
     max-width: 70vw !important;
   }
   #products {
@@ -176,14 +176,14 @@ button {
     justify-content: center;
     display: flex;
   }
-  
+
   .footerAdd {
     display: block !important;
   }
   .footerAdd .ml-auto {
     padding-top: 20px;
   }
-  .searchbar{
+  .searchbar {
     width: 100% !important;
   }
 }

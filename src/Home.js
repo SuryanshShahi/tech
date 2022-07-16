@@ -477,7 +477,7 @@ function Home() {
                                 color: "grey",
                               }}
                             >
-                            &nbsp;&nbsp;₹<del>1849</del>
+                              &nbsp;&nbsp;₹<del>1849</del>
                             </span>
                             <span
                               style={{
@@ -517,7 +517,7 @@ function Home() {
                                   color: "grey",
                                 }}
                               >
-                              &nbsp;&nbsp;₹<del>1849</del>
+                                &nbsp;&nbsp;₹<del>1849</del>
                               </span>
                               <span
                                 style={{

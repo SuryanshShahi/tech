@@ -126,7 +126,10 @@ function Navbar() {
                   <div style={{ fontSize: "12px" }}>WhishList</div>
                 </div>
               </div>
-              <div className="px-3 d-flex position-relative" style={{ width: "fit-content" }}>
+              <div
+                className="px-3 d-flex position-relative"
+                style={{ width: "fit-content" }}
+              >
                 <NavLink
                   to="/bag"
                   className="fa fa-shopping-bag fa-lg text-decoration-none text-dark"
