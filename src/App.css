@@ -78,6 +78,7 @@ input[type="radio"] {
 #footerFilter {
   display: none;
 }
+
 /* ------------------LandingPage----------------- */
 
 #LandingPage .container::-webkit-scrollbar {
@@ -162,6 +163,9 @@ button {
   }
   .carousel-indicators button {
     display: none;
+  }
+  #products .img-fluid{
+    max-width: 70vw !important;
   }
   #products {
     margin-top: 70px !important;
