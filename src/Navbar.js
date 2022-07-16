@@ -91,7 +91,7 @@ function Navbar() {
                 </NavLink>
               </li>
 
-              <li className="nav-item pl-lg-5 w-50 pt-lg-0 pt-3">
+              <li className="nav-item searchbar pl-lg-5 w-50 pt-lg-0 pt-3">
                 {" "}
                 <form className="d-flex align-items-center">
                   <div

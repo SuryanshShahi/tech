@@ -33,7 +33,7 @@ function Home() {
     return <div>Loading...</div>;
   };
   return (
-    <section style={{ marginTop: "100px" }}>
+    <section id="products" style={{ marginTop: "100px" }}>
       <div className="pl-3 pb-lg-0 pb-3 pt-2">
         <div>
           Home {params.pa}
@@ -410,9 +410,9 @@ function Home() {
               <div className="row gx-0">
                 {data.map((e) => {
                   return (
-                    <div className="col-lg-3 col-md-4 col-6" key={e.id}>
+                    <div className="col-lg-3 col-md-4 col-sm-6 col-12" key={e.id}>
                       <div
-                        className="card carscard text-decoration-none mx-3"
+                        className="card carscard text-decoration-none mx-3 mt-1"
                         data-bs-toggle="tooltip"
                         title={e.title}
                       >

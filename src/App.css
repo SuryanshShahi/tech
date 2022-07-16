@@ -159,11 +159,11 @@ button {
     display: flex;
     height: 30px;
   }
-  button {
+  .carousel-indicators button {
     display: none;
   }
   #products {
-    margin-top: 65px !important;
+    margin-top: 70px !important;
   }
 }
 @media (max-width: 350px) {
@@ -176,6 +176,9 @@ button {
   }
   .footerAdd .ml-auto {
     padding-top: 20px;
+  }
+  .searchbar{
+    width: 100% !important;
   }
 }
 /* .footerAdd{

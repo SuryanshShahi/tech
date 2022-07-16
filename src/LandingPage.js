@@ -139,7 +139,7 @@ function LandingPage() {
                 return (
                   <div className="col-lg-3 col-md-4 col-sm-6 col-12" key={e.id}>
                     <div
-                      className="card carscard text-decoration-none mx-3"
+                      className="card carscard text-decoration-none mx-3 mt-1"
                       data-bs-toggle="tooltip"
                       title={e.title}
                     >
