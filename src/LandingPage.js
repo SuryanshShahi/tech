@@ -201,7 +201,7 @@ function LandingPage() {
                               color: "grey",
                             }}
                           >
-                            &nbsp;&nbsp;Rs. 1849
+                            &nbsp;&nbsp;₹<del>1849</del>
                           </span>
                           <span
                             style={{
@@ -241,7 +241,7 @@ function LandingPage() {
                                 color: "grey",
                               }}
                             >
-                              &nbsp;&nbsp;Rs. 1849
+                              &nbsp;&nbsp;₹<del>1849</del>
                             </span>
                             <span
                               style={{

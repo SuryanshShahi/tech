@@ -178,7 +178,7 @@ function Bag() {
               </div>
             </div>
 
-            <div className="mx-3 my-2">
+            <div className="mx-lg-3 mx-md-3 my-2">
               <div className="d-flex py-4">
                 <input type="checkbox" className="form-check" checked />
                 <b className="pl-2">1/1 ITEMS SELECTED</b>
@@ -220,7 +220,7 @@ function Bag() {
                 ) : (
                   <div className="row d-flex py-3 pl-3 gx-0">
                     <div className="col-2 align-items-center d-flex">
-                      <img src={items.image} className="img-fluid p-2" />
+                      <img src={items.image} className="img-fluid p-lg-2 p-md-2" />
                     </div>
                     <div className="col-10 pl-3">
                       <div style={{ fontWeight: "500" }}> {items.title}</div>
