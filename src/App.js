@@ -20,7 +20,6 @@ const App = () => {
       <div className="app">
         <Switch>
           <Route exact path="/products/:id/bag" component={Bag} />
-          <Route exact path="/bag" component={Bag} />
           <div>
             <Navbar />
             <Route exact path="/" component={LandingPage} />
@@ -34,3 +33,4 @@ const App = () => {
   );
 };
 export default App;
+// <Route exact path="/bag" component={Bag} />

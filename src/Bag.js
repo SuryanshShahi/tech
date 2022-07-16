@@ -237,6 +237,7 @@ function Bag() {
                         className="border-0 rounded mt-3"
                         style={{
                           outline: "none",
+                          cursor:"pointer",
                           background: "rgb(212 213 217 / 43%)",
                           fontWeight: "500",
                         }}
@@ -255,6 +256,7 @@ function Bag() {
                         className="border-0 rounded my-2 ml-3"
                         style={{
                           outline: "none",
+                          cursor:"pointer",
                           background: "rgb(212 213 217 / 43%)",
                           fontWeight: "500",
                         }}
