@@ -176,6 +176,7 @@ button {
     justify-content: center;
     display: flex;
   }
+  
   .footerAdd {
     display: block !important;
   }
