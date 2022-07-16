@@ -1,8 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import StarsRating from "stars-rating";
-import { useParams } from "react-router-dom";
 import ImageSkeleton from "./ImageSkeleton";
 import { ProgressBar } from "react-bootstrap";
 function Products() {
@@ -34,15 +33,8 @@ function Products() {
     similarData();
   }, []);
 
-  const Loading = () => {
-    return <div>Loading...</div>;
-  };
-
-  const ratingChanged = (newRating) => {
-    console.log(newRating);
-  };
   return (
-    <div id="products" style={{ marginTop: "100px" }}>
+    <div id="products" style={{ marginTop: "70px" }}>
       {loading ? (
         <ImageSkeleton />
       ) : (
@@ -52,7 +44,7 @@ function Products() {
               <img
                 src={items.image}
                 className="img-fluid mt-lg-5"
-                height="600px"
+                style={{maxWidth:"450px"}}
               />
             </div>
           </div>
@@ -85,69 +77,69 @@ function Products() {
 
             <hr style={{ height: "0.1px" }}></hr>
             <div className="addtobag">
-            <div className="">
-              <div className="pt-1">
-                <span
-                  style={{
-                    fontWeight: "500",
-                    fontSize: "24px",
-                  }}
+              <div className="">
+                <div className="pt-1">
+                  <span
+                    style={{
+                      fontWeight: "500",
+                      fontSize: "24px",
+                    }}
+                  >
+                    $ {items.price}
+                  </span>
+                  <span
+                    style={{
+                      fontSize: "12px",
+                      fontWeight: "lighter",
+                      color: "grey",
+                    }}
+                  >
+                    &nbsp;&nbsp;Rs. 1849
+                  </span>
+                  <span
+                    style={{
+                      fontSize: "12px",
+                      fontWeight: "lighter",
+                      color: "orange",
+                    }}
+                  >
+                    &nbsp;&nbsp;(<b>Rs. 1150 OFF</b>)
+                  </span>
+                </div>
+                <div className="text-success py-2">
+                  <b>inclusive of all taxes</b>
+                </div>
+                <div className="d-flex py-2">
+                  <div className="pr-5" style={{ fontSize: "16px" }}>
+                    <b>SELECT SIZE</b>
+                  </div>
+                  <div style={{ fontSize: "14px", color: "#FF3E6C" }}>
+                    <b>SIZE CHART</b>
+                  </div>
+                </div>
+                <div className="d-flex">
+                  <div className="align-items-center justify-content-center d-flex SelectSize">
+                    S
+                  </div>
+                  <div className="align-items-center justify-content-center d-flex mx-3 SelectSize">
+                    M
+                  </div>
+                  <div className="align-items-center justify-content-center d-flex SelectSize">
+                    L
+                  </div>
+                  <div className="align-items-center justify-content-center d-flex mx-3 SelectSize">
+                    XL
+                  </div>
+                </div>
+                <NavLink
+                  to={`/products/${id}/bag`}
+                  className="btn btn-danger mt-4 mb-3 px-5 py-3"
+                  style={{ width: "285px" }}
                 >
-                  $ {items.price}
-                </span>
-                <span
-                  style={{
-                    fontSize: "12px",
-                    fontWeight: "lighter",
-                    color: "grey",
-                  }}
-                >
-                  &nbsp;&nbsp;Rs. 1849
-                </span>
-                <span
-                  style={{
-                    fontSize: "12px",
-                    fontWeight: "lighter",
-                    color: "orange",
-                  }}
-                >
-                  &nbsp;&nbsp;(<b>Rs. 1150 OFF</b>)
-                </span>
+                  <span className="fa fa-shopping-bag fa-lg pr-3"></span>ADD TO
+                  BAG
+                </NavLink>
               </div>
-              <div className="text-success py-2">
-                <b>inclusive of all taxes</b>
-              </div>
-              <div className="d-flex py-2">
-                <div className="pr-5" style={{ fontSize: "16px" }}>
-                  <b>SELECT SIZE</b>
-                </div>
-                <div style={{ fontSize: "14px", color: "#FF3E6C" }}>
-                  <b>SIZE CHART</b>
-                </div>
-              </div>
-              <div className="d-flex">
-                <div className="align-items-center justify-content-center d-flex SelectSize">
-                  S
-                </div>
-                <div className="align-items-center justify-content-center d-flex mx-3 SelectSize">
-                  M
-                </div>
-                <div className="align-items-center justify-content-center d-flex SelectSize">
-                  L
-                </div>
-                <div className="align-items-center justify-content-center d-flex mx-3 SelectSize">
-                  XL
-                </div>
-              </div>
-              <NavLink
-                to={`/products/${id}/bag`}
-                className="btn btn-danger mt-4 mb-3 px-5 py-3"
-                style={{ width: "285px" }}
-              >
-                <span className="fa fa-shopping-bag fa-lg pr-3"></span>ADD TO
-                BAG
-              </NavLink>
-            </div>
             </div>
 
             <hr style={{ height: "1px" }}></hr>

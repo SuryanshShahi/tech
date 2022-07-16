@@ -1,9 +1,31 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { NavLink, useParams } from "react-router-dom";
+import axios from "axios";
 import logo from "./images/myntra.png";
-import bag from "./images/bag.jpg";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 function Bag() {
+  const { id } = useParams();
+  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const getData = () => {
+    axios
+      .get(`https://fakestoreapi.com/products/${id}/`)
+      .then((res) => {
+        setItems(res.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  useEffect(() => {
+    getData();
+    document.title = `SHOPPING BAG`;
+  }, []);
   return (
     <section id="bag">
       <nav
@@ -158,7 +180,7 @@ function Bag() {
 
             <div className="mx-3 my-2">
               <div className="d-flex py-4">
-                <input type="checkbox" className="form-check" checked/>
+                <input type="checkbox" className="form-check" checked />
                 <b className="pl-2">1/1 ITEMS SELECTED</b>
                 <div
                   className="ml-auto d-flex align-items-center"
@@ -180,88 +202,112 @@ function Bag() {
               style={{ border: "1px solid #d4d5d9" }}
             >
               <div
-                className="justify-content-end d-flex fa-2x mr-3"
+                className="justify-content-end bg-white d-flex fa-2x mr-3"
                 style={{ height: "0px" }}
               >
                 &times;
               </div>
               <div className="d-flex">
-                <div className="row d-flex py-3 pl-3 gx-0">
-                  <div className="col-2">
-                    <img src={bag} className="img-fluid p-2" />
+                {loading ? (
+                  <div className="row d-flex py-3 pl-3 gx-0">
+                    <div className="col-2">
+                      <Skeleton height={188} />
+                    </div>
+                    <div className="col-10 pl-3 pr-3">
+                      <Skeleton className="" height={188} />
+                    </div>
                   </div>
-                  <div className="col-10 pl-3">
-                    Name<br></br> Category <br></br>Sold By: Flashstar Commerce
-                    <br></br>
-                    <select
-                      className="border-0 rounded my-2"
-                      style={{
-                        outline: "none",
-                        background: "#d4d5d9",
-                        fontWeight: "500",
-                      }}
-                    >
-                      <option disabled selected hidden>
-                        Size
-                      </option>
-                      <option>6</option>
-                      <option>7</option>
-                      <option>8</option>
-                      <option>9</option>
-                      <option>10</option>
-                      <option>11</option>
-                    </select>
-                    <select
-                      className="border-0 rounded my-2 ml-3"
-                      style={{
-                        outline: "none",
-                        background: "#d4d5d9",
-                        fontWeight: "500",
-                      }}
-                    >
-                      <option disabled selected hidden>
-                        Qty
-                      </option>
-                      <option>6</option>
-                      <option>7</option>
-                      <option>8</option>
-                      <option>9</option>
-                      <option>10</option>
-                      <option>11</option>
-                    </select>
-                    <br></br>
-                    <div className="py-1">
-                      <span
+                ) : (
+                  <div className="row d-flex py-3 pl-3 gx-0">
+                    <div className="col-2 align-items-center d-flex">
+                      <img src={items.image} className="img-fluid p-2" />
+                    </div>
+                    <div className="col-10 pl-3">
+                      <div style={{ fontWeight: "500" }}> {items.title}</div>
+                      <div>{items.category}</div>
+                      <div
+                        style={{ fontSize: "12px", color: "rgb(167 169 173)" }}
+                      >
+                        Sold By: Flashstar Commerce
+                      </div>
+                      <select
+                        className="border-0 rounded mt-3"
                         style={{
+                          outline: "none",
+                          background: "rgb(212 213 217 / 43%)",
                           fontWeight: "500",
                         }}
                       >
-                        $
-                      </span>
-                      <span
+                        <option disabled selected hidden>
+                          Size
+                        </option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                      </select>
+                      <select
+                        className="border-0 rounded my-2 ml-3"
                         style={{
-                          fontSize: "12px",
-                          fontWeight: "lighter",
-                          color: "grey",
+                          outline: "none",
+                          background: "rgb(212 213 217 / 43%)",
+                          fontWeight: "500",
                         }}
                       >
-                        &nbsp;&nbsp;Rs. 1849
-                      </span>
-                      <span
-                        style={{
-                          fontSize: "12px",
-                          fontWeight: "lighter",
-                          color: "orange",
-                        }}
-                      >
-                        &nbsp;&nbsp;(Rs. 1150 OFF)
-                      </span>
+                        <option disabled selected hidden>
+                          Qty
+                        </option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                      </select>
+                      <br></br>
+                      <div className="py-1">
+                        <span
+                          style={{
+                            fontWeight: "500",
+                          }}
+                        >
+                          $ {items.price}
+                        </span>
+                        <span
+                          style={{
+                            fontSize: "12px",
+                            fontWeight: "lighter",
+                            color: "grey",
+                          }}
+                        >
+                          &nbsp;&nbsp;₹<del>1849</del>
+                        </span>
+                        <span className="text-danger"
+                          style={{
+                            fontSize: "12px",
+                          }}
+                        >
+                          &nbsp;&nbsp;(50% OFF)
+                        </span>
+                      </div>
+                      <div style={{ fontSize: "12px" }}>
+                        <div className="fa fa-check text-success"></div>
+                        &nbsp;Delivery by
+                        <span style={{ fontWeight: "500" }}>
+                          {" "}
+                          &nbsp;
+                          {new Date().toLocaleString("en-US", {
+                            day: "2-digit",
+                            month: "long",
+                            year: "2-digit",
+                          })}
+                        </span>
+                      </div>
                     </div>
-                    <div className="fa fa-check text-success"></div>
-                    &nbsp;Delivery by
-                    <span style={{ fontWeight: "500" }}>&nbsp;xxxx</span>
                   </div>
-                </div>
+                )}
               </div>
             </div>
 
@@ -287,30 +333,30 @@ function Bag() {
               <b>&nbsp;&nbsp;&nbsp;Help India Fight COVID-19</b>
             </div>
 
-            <div className="pb-3">
+            <div className="pb-3" style={{fontSize:"16px", fontWeight:"500"}}>
               <span
                 className="px-3 py-2"
                 style={{ borderRadius: "35px", border: "1px solid #d4d5d9" }}
               >
-                <b>₹10</b>
+                ₹10
               </span>
               <span
                 className="px-3 py-2 ml-3"
                 style={{ borderRadius: "35px", border: "1px solid #d4d5d9" }}
               >
-                <b>₹50</b>
+                ₹50
               </span>
               <span
                 className="px-3 py-2 mx-3"
                 style={{ borderRadius: "35px", border: "1px solid #d4d5d9" }}
               >
-                <b>₹100</b>
+                ₹100
               </span>
               <span
                 className="px-3 py-2"
                 style={{ borderRadius: "35px", border: "1px solid #d4d5d9" }}
               >
-                <b>Other</b>
+                Other
               </span>
             </div>
             <hr style={{ color: "#d4d5d9" }}></hr>
@@ -353,47 +399,56 @@ function Bag() {
               >
                 PRICE DETAILS(3 Items)
               </div>
-              <div className="d-flex align-items-center">
-                <div className="py-2" style={{ fontSize: "14px" }}>
-                  TOTAL MRP
+              {loading ? (
+                <div className="">
+                    <Skeleton height={148} />
+                  </div>
+               
+              ) : (
+                <div style={{fontSize:'13.5px'}}>
+                  <div className="d-flex align-items-center">
+                    <div className="py-2">
+                      Total MRP
+                    </div>
+                    <div className="ml-auto"><b>$</b> {items.price}</div>
+                  </div>
+                  <div className="d-flex align-items-center">
+                    <div className="py-2">
+                      Discount on MRP
+                    </div>
+                    <div className="ml-auto text-success">-₹1150</div>
+                  </div>
+                  <div className="d-flex align-items-center">
+                    <div className="py-2" >
+                      Coupon Discount
+                    </div>
+                    <div className="ml-auto">
+                      <span className="text-danger">Apply Coupon</span>
+                    </div>
+                  </div>
+                  <div className="d-flex align-items-center">
+                    <div className="py-2">
+                      Convenience Fee{" "}
+                      <span className="text-danger">
+                        <b>Know More</b>
+                      </span>
+                    </div>
+                    <div className="ml-auto">
+                      <del>₹99</del><span className="text-success pl-2">FREE</span>{" "}
+                    </div>
+                  </div>
                 </div>
-                <div className="ml-auto">₹price</div>
-              </div>
-              <div className="d-flex align-items-center">
-                <div className="py-2" style={{ fontSize: "14px" }}>
-                  Discount on MRP
-                </div>
-                <div className="ml-auto">-₹price</div>
-              </div>
-              <div className="d-flex align-items-center">
-                <div className="py-2" style={{ fontSize: "14px" }}>
-                  Coupon Discount
-                </div>
-                <div className="ml-auto">
-                  <span className="text-danger">Apply Coupon</span>
-                </div>
-              </div>
-              <div className="d-flex align-items-center">
-                <div className="py-2" style={{ fontSize: "14px" }}>
-                  Convenience Fee{" "}
-                  <span className="text-danger">
-                    <b>Know More</b>
-                  </span>
-                </div>
-                <div className="ml-auto">
-                  ₹99<span className="text-success pl-2">FREE</span>{" "}
-                </div>
-              </div>
+              )}
             </div>
 
             <hr style={{ color: "#d4d5d9" }}></hr>
 
             <div className="d-flex align-items-center">
-              <div className="py-2" style={{ fontSize: "14px" }}>
+              <div className="py-2">
                 <b>Total Amount</b>
               </div>
               <div className="ml-auto">
-                <b>₹price</b>
+                <b>$&nbsp;XXX</b>
               </div>
             </div>
             <div

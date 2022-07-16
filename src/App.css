@@ -93,6 +93,7 @@ input[type="radio"] {
 .nav-tabs .btn-danger:hover {
   background-color: #ff3e6c;
   border: none;
+  color: white;
 }
 
 .nav-tabs .btn-danger.active {
