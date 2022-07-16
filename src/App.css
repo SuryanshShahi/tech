@@ -19,7 +19,7 @@
   opacity: 1;
 }
 
-.carousel-inner{
+.carousel-inner {
   z-index: -1;
 }
 .carscard {
@@ -151,7 +151,7 @@ button {
   .bundles {
     display: none;
   }
-  .nav-tabs .btn-danger{
+  .nav-tabs .btn-danger {
     font-size: 12px;
     width: fit-content;
     align-items: center;
@@ -159,19 +159,22 @@ button {
     display: flex;
     height: 30px;
   }
-  #products{
+  button {
+    display: none;
+  }
+  #products {
     margin-top: 65px !important;
   }
 }
-@media(max-width:350px){
-  .addtobag{
+@media (max-width: 350px) {
+  .addtobag {
     justify-content: center;
     display: flex;
   }
-  .footerAdd{
+  .footerAdd {
     display: block !important;
   }
-  .footerAdd .ml-auto{
+  .footerAdd .ml-auto {
     padding-top: 20px;
   }
 }
@@ -184,8 +187,8 @@ button {
   display: none;
   position: fixed;
   z-index: 999 !important;
-  background-color: rgb(0,0,0); /* Black fallback color */
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgb(0, 0, 0); /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
   top: 0;
   right: 0;
   overflow-x: hidden;

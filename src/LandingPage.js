@@ -137,7 +137,7 @@ function LandingPage() {
             <div className="row gx-0">
               {data.map((e) => {
                 return (
-                  <div className="col-lg-3 col-md-4 col-6" key={e.id}>
+                  <div className="col-lg-3 col-md-4 col-sm-6 col-12" key={e.id}>
                     <div
                       className="card carscard text-decoration-none mx-3"
                       data-bs-toggle="tooltip"
