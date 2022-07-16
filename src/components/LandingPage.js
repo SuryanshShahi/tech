@@ -31,6 +31,7 @@ function LandingPage() {
 
   useEffect(() => {
     getData();
+    document.title = `Online Shopping for Women, Men, Kids Fashion & Lifestyle - Myntra`;
   }, []);
 
   const filterData = (categ) => {
