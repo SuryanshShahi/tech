@@ -355,7 +355,7 @@ function Home() {
             style={{ boxShadow: "0px 5px 7px -3px #80808075" }}
           >
             <div
-              className="btn btn-danger mb-lg-0 mb-md-4 mb-3 active mx-2 filterbtn"
+              className="btn btn-danger mb-lg-0 mb-2 active mx-2 filterbtn"
               id="click"
               type="button"
               data-toggle="tab"
@@ -364,7 +364,7 @@ function Home() {
               All
             </div>
             <div
-              className="btn btn-danger mb-lg-0 mb-md-4 mb-3 mx-2 filterbtn"
+              className="btn btn-danger mb-lg-0 mb-2 mx-2 filterbtn"
               type="button"
               data-toggle="tab"
               onClick={() => filterData("men's clothing")}
@@ -372,7 +372,7 @@ function Home() {
               Men's Clothing
             </div>
             <div
-              className="btn btn-danger mb-lg-0 mb-md-4 mb-3 mx-2 filterbtn"
+              className="btn btn-danger mb-lg-0 mb-2 mx-2 filterbtn"
               type="button"
               data-toggle="tab"
               onClick={() => filterData("women's clothing")}
@@ -380,7 +380,7 @@ function Home() {
               Women's Clothing
             </div>
             <div
-              className="btn btn-danger mb-lg-0 mb-md-4 mb-3 mx-2 filterbtn"
+              className="btn btn-danger mb-lg-0 mb-2 mx-2 filterbtn"
               type="button"
               data-toggle="tab"
               onClick={() => filterData("jewelery")}
@@ -388,7 +388,7 @@ function Home() {
               Jwellery
             </div>
             <div
-              className="btn btn-danger mb-lg-0 mb-md-4 mb-3 mx-2 filterbtn"
+              className="btn btn-danger mb-lg-0 mb-2 mx-2 filterbtn"
               type="button"
               data-toggle="tab"
               onClick={() => filterData("electronics")}

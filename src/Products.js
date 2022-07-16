@@ -84,7 +84,8 @@ function Products() {
             </div>
 
             <hr style={{ height: "0.1px" }}></hr>
-            <div>
+            <div className="addtobag">
+            <div className="">
               <div className="pt-1">
                 <span
                   style={{
@@ -140,12 +141,13 @@ function Products() {
               </div>
               <NavLink
                 to={`/products/${id}/bag`}
-                className="btn btn-danger my-3 px-5 py-3"
+                className="btn btn-danger mt-4 mb-3 px-5 py-3"
                 style={{ width: "285px" }}
               >
                 <span className="fa fa-shopping-bag fa-lg pr-3"></span>ADD TO
                 BAG
               </NavLink>
+            </div>
             </div>
 
             <hr style={{ height: "1px" }}></hr>

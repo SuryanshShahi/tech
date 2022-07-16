@@ -42,7 +42,7 @@ function LandingPage() {
   };
 
   return (
-    <div id="LandingPage" style={{ marginTop: "150px" }}>
+    <div id="LandingPage" style={{ marginTop: "100px" }}>
       <NavLink to="/products">
         <div
           className="position-relative effects"
@@ -72,13 +72,13 @@ function LandingPage() {
         >
           Search By Category
         </div>
-        <div className="justify-content-center d-flex py-lg-3 pt-4">
+        <div className="justify-content-center d-flex py-lg-3">
           <div
-            className="container nav nav-tabs justify-content-center d-flex py-4"
+            className="container nav nav-tabs justify-content-center d-flex py-lg-4 pt-4"
             style={{ boxShadow: "0px 5px 7px -3px #80808075" }}
           >
             <div
-              className="btn btn-danger mb-lg-0 mb-4 active mx-2 filterbtn"
+              className="btn btn-danger mb-lg-0 mb-2 active mx-2 filterbtn"
               id="click"
               type="button"
               data-toggle="tab"
@@ -88,7 +88,7 @@ function LandingPage() {
             </div>
 
             <div
-              className="btn btn-danger mb-lg-0 mb-4 mx-2 filterbtn"
+              className="btn btn-danger mb-lg-0 mb-2 mx-2 filterbtn"
               type="button"
               data-toggle="tab"
               onClick={() => filterData("women's clothing")}
@@ -96,7 +96,7 @@ function LandingPage() {
               Women's Clothing
             </div>
             <div
-              className="btn btn-danger mb-lg-0 mb-4 mx-2 filterbtn"
+              className="btn btn-danger mb-lg-0 mb-2 mx-2 filterbtn"
               type="button"
               data-toggle="tab"
               onClick={() => filterData("men's clothing")}
@@ -104,7 +104,7 @@ function LandingPage() {
               Men's Clothing
             </div>
             <div
-              className="btn btn-danger mb-lg-0 mb-4 mx-2 filterbtn"
+              className="btn btn-danger mb-lg-0 mb-2 mx-2 filterbtn"
               type="button"
               data-toggle="tab"
               onClick={() => filterData("jewelery")}
@@ -112,7 +112,7 @@ function LandingPage() {
               Jwellery
             </div>
             <div
-              className="btn btn-danger mb-lg-0 mb-4 mx-2 filterbtn"
+              className="btn btn-danger mb-lg-0 mb-2 mx-2 filterbtn"
               type="button"
               data-toggle="tab"
               onClick={() => filterData("electronics")}

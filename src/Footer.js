@@ -116,7 +116,7 @@ function Footer() {
             Goggles | Bras | Suit | Chinos | Shoes| Adidas Shoes | Woodland
             Shoes | Jewellery | Designers Sarees
           </div>
-          <div className="d-flex pt-5 pb-4">
+          <div className="d-flex footerAdd pt-5 pb-4">
             <div className="">
               In case of any concern,{" "}
               <span className="text-primary">
@@ -141,7 +141,7 @@ function Footer() {
                 Registered Office Address
               </span>
 
-              <div className="d-flex pb-3">
+              <div className="footerAdd d-flex pb-3">
                 <div>
                   Buildings Alyssa,<br></br>
                   Begonia and Clover situated in Embassy Tech Village,<br></br>
